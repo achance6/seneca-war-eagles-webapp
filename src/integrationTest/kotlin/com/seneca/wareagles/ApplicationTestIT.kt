@@ -1,4 +1,4 @@
-package com.seneca.com.seneca.wareagles
+package com.seneca.wareagles
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
