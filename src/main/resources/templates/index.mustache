@@ -1,15 +1,106 @@
 {{<layout}}{{$body}}
 <main class="container">
-    <section>
-        <h1>Htmx Demo</h1>
-        <div id="parent-div"></div>
-        <button hx-get="/demo"
-                hx-trigger="click"
-                hx-target="#parent-div"
-                hx-swap="outerHTML">
-            Click Me!
-        </button>
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 bg-white shadow-md">
+        <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+            <h1 class="text-2xl font-bold text-green-700">Little League</h1>
+            <nav class="space-x-6 hidden md:block">
+                <a href="#" class="hover:text-green-600">Home</a>
+                <a href="#" class="hover:text-green-600">News</a>
+                <a href="#" class="hover:text-green-600">Schedules</a>
+                <a href="#" class="hover:text-green-600">Fields</a>
+                <a href="#" class="hover:text-green-600">Forms</a>
+                <a href="#" class="hover:text-green-600">Contact</a>
+            </nav>
+            <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg shadow">
+                Subscribe
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-100 py-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-green-700">Welcome to Our Little League</h2>
+            <p class="mt-4 text-lg text-gray-700">Building community through baseball and teamwork.</p>
+            <div class="mt-6 space-x-4">
+                <a href="#" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg shadow">View Schedules</a>
+                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-lg shadow">Find Fields</a>
+            </div>
+        </div>
     </section>
+
+    <!-- Quick Links -->
+    <section class="max-w-6xl mx-auto py-12 grid md:grid-cols-4 gap-6">
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
+            <h3 class="font-bold text-lg mb-2 text-green-700">News</h3>
+            <p class="text-gray-600">Latest announcements and updates.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
+            <h3 class="font-bold text-lg mb-2 text-green-700">Schedules</h3>
+            <p class="text-gray-600">Tournament schedules by division.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
+            <h3 class="font-bold text-lg mb-2 text-green-700">Fields</h3>
+            <p class="text-gray-600">Directions and details for each field.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg">
+            <h3 class="font-bold text-lg mb-2 text-green-700">Forms</h3>
+            <p class="text-gray-600">Registration, waivers, and more.</p>
+        </div>
+    </section>
+
+    <!-- News Preview -->
+    <section class="bg-gray-50 py-12">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold text-green-700 mb-6">Latest News</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+                    <h3 class="font-bold mb-2">[News Title]</h3>
+                    <p class="text-gray-600">Short preview of the news article...</p>
+                    <a href="#" class="text-green-600 font-semibold mt-2 block">Read more →</a>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+                    <h3 class="font-bold mb-2">[News Title]</h3>
+                    <p class="text-gray-600">Short preview of the news article...</p>
+                    <a href="#" class="text-green-600 font-semibold mt-2 block">Read more →</a>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+                    <h3 class="font-bold mb-2">[News Title]</h3>
+                    <p class="text-gray-600">Short preview of the news article...</p>
+                    <a href="#" class="text-green-600 font-semibold mt-2 block">Read more →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t-4 border-green-600 mt-12">
+        <div class="max-w-6xl mx-auto py-8 grid md:grid-cols-3 gap-6 text-sm text-gray-600">
+            <div>
+                <h4 class="font-bold text-green-700 mb-2">Contact</h4>
+                <p>Email: info@littleleague.org</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-green-700 mb-2">Quick Links</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:text-green-600">News</a></li>
+                    <li><a href="#" class="hover:text-green-600">Schedules</a></li>
+                    <li><a href="#" class="hover:text-green-600">Forms</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-green-700 mb-2">Stay Connected</h4>
+                <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-lg shadow">
+                    Subscribe to Newsletter
+                </button>
+            </div>
+        </div>
+        <div class="text-center py-4 text-gray-500 text-xs bg-gray-200">
+            © 2025 Little League. All rights reserved.
+        </div>
+    </footer>
 </main>
 {{/body}}
 {{/layout}}
