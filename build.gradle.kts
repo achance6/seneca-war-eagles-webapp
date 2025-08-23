@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "2.2.10"
     kotlin("plugin.spring") version "2.2.10"
+    kotlin("kapt") version "2.2.10"
     id("org.springframework.boot") version "3.5.4"
     id("io.spring.dependency-management") version "1.1.7"
 }
@@ -22,6 +23,9 @@ dependencies {
     implementation("org.flywaydb:flyway-core")
     implementation("org.flywaydb:flyway-database-postgresql")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+    implementation("io.jstach:jstachio-spring-boot-starter-webmvc:1.3.7")
+    kapt("io.jstach:jstachio-apt:1.3.7")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 
