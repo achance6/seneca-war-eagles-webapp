@@ -58,7 +58,6 @@ kotlin {
 
 tasks.withType<Test> {
     jvmArgs("-javaagent:${mockitoAgent.asPath}")
-    useJUnitPlatform()
 }
 
 @Suppress("UnstableApiUsage")
@@ -67,6 +66,7 @@ testing.suites {
         dependencies {
             implementation(project())
         }
+        useJUnitJupiter()
     }
     val test by getting(JvmTestSuite::class)
 
