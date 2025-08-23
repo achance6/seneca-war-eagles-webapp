@@ -11,6 +11,11 @@ import org.springframework.web.servlet.View
 class HomeController {
     @GetMapping("/")
     fun home(): View {
-        return JStachioModelView.of(DemoModel("World", 100))
+        return JStachioModelView.of(IndexModel())
+    }
+
+    @GetMapping("/demo")
+    fun demo(): View {
+        return JStachioModelView.of(DemoModel("World", 10))
     }
 }

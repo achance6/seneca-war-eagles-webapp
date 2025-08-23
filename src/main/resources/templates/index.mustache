@@ -1,7 +1,15 @@
 {{<layout}}{{$body}}
-    Hello {{name}}!
-    <br>
-    <br>
-    You are visitor number {{visits}}.
+<main class="container">
+    <section>
+        <h1>Htmx Demo</h1>
+        <div id="parent-div"></div>
+        <button hx-get="/demo"
+                hx-trigger="click"
+                hx-target="#parent-div"
+                hx-swap="innerHTML">
+            Click Me!
+        </button>
+    </section>
+</main>
 {{/body}}
 {{/layout}}

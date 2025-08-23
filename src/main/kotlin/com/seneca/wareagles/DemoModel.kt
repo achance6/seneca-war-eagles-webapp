@@ -2,5 +2,5 @@ package com.seneca.wareagles
 
 import io.jstach.jstache.JStache
 
-@JStache(path = "index")
+@JStache(path = "demo")
 data class DemoModel(val name: String, val visits: Long)
